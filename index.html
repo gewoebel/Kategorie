@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>KATEGORIE</title>
+  <meta name="theme-color" content="#009D43" />
+  <meta name="description" content="KATEGORIE – Buchstabe und Kategorie aufdecken, mobil optimiert und als GitHub Page nutzbar." />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img" aria-label="KATEGORIE Logo">
+            <rect x="6" y="6" width="52" height="52" rx="14" fill="currentColor"></rect>
+            <path d="M22 44L32 20L42 44M26 35H38" stroke="#111111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>KATEGORIE</h1>
+          <p class="subline">BUCHSTABE UND KATEGORIE ZIEHEN</p>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="game-layout">
+      <section class="board" aria-label="Spielfeld">
+        <div class="pair-grid">
+          <article class="game-card letter-card" aria-live="polite">
+            <div class="card-label">BUCHSTABE</div>
+            <div id="letter-value" class="card-value">A</div>
+          </article>
+
+          <article class="game-card category-card" aria-live="polite">
+            <div class="card-label">KATEGORIE</div>
+            <div id="category-value" class="card-value card-value-category">ZIGARETTEN UND TABAKMARKEN</div>
+          </article>
+        </div>
+
+        <div class="status-panel" aria-live="polite">
+          <p id="status-text">STARTKARTE AKTIV. TIPPE AUF „NÄCHSTE KARTEN“.</p>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="Steuerung">
+        <button id="btn-prev" class="btn btn-green" type="button" disabled>LETZTE KARTE</button>
+        <button id="btn-next" class="btn btn-orange" type="button">NÄCHSTE KARTEN</button>
+        <button id="btn-new-game" class="btn btn-blue" type="button">NEUES SPIEL</button>
+        <button id="btn-rules" class="btn btn-yellow" type="button">REGELN</button>
+      </section>
+    </main>
+  </div>
+
+  <div id="rules-overlay" class="overlay hidden" aria-hidden="true">
+    <section class="overlay-panel" role="dialog" aria-modal="true" aria-labelledby="rules-title">
+      <div class="overlay-top">
+        <h2 id="rules-title">REGELN</h2>
+        <button id="btn-close-rules" class="btn btn-blue btn-small" type="button">ZURÜCK</button>
+      </div>
+      <div class="rules-body">
+        <p></p>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
