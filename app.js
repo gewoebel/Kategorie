@@ -123,7 +123,8 @@ const categories = [
   "SONGS",
   "COCKTAILKARTE",
   "GRÜNDE SEX ABZUBRECHEN",
-  "GRÜNDE SEX ZU HABEN"
+  "GRÜNDE SEX ZU HABEN",
+  "EINE GESCHÄFTSIDEE"
 ];
 
 const letterValue = document.getElementById("letter-value");
