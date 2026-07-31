@@ -1,5 +1,7 @@
 const letters = Array.from({ length: 26 }, (_, index) => String.fromCharCode(65 + index));
 
+const specialLetters = ["Q", "X", "Y"];
+
 const categories = [
   "ZIGARETTEN UND TABAKMARKEN",
   "ZEICHENTRICKCHARAKTERE",
@@ -175,7 +177,13 @@ function renderStartCard() {
 
 function renderCurrentPair() {
   const pair = deck[currentIndex];
-  letterValue.textContent = pair.letter;
+
+  let displayLetter = pair.letter;
+  if (specialLetters.includes(displayLetter)) {
+    displayLetter = "Q / X / Y"; // oder "Q – X – Y", wie du es optisch willst
+  }
+
+  letterValue.textContent = displayLetter;
   categoryValue.textContent = pair.category;
   statusText.textContent = `RUNDE ${currentIndex + 1} VON ${deck.length}.`;
 }
