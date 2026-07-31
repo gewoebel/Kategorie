@@ -124,7 +124,9 @@ const categories = [
   "COCKTAILKARTE",
   "GRÜNDE SEX ABZUBRECHEN",
   "GRÜNDE SEX ZU HABEN",
-  "EINE GESCHÄFTSIDEE"
+  "EINE GESCHÄFTSIDEE",
+  "EINE GUTE IDEE",
+  "EINE SCHLECHTE IDEE"
 ];
 
 const letterValue = document.getElementById("letter-value");
